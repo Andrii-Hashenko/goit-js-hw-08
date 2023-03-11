@@ -10,12 +10,7 @@ player.setVolume(0);
 
 setPlaybackPosition();
 
-player.on(
-  'timeupdate',
-  throttle(e => {
-    localStorage.setItem('videoplayer-current-time', e.seconds);
-  }, 1000)
-);
+player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 function onTimeUpdate(data) {
   console.log(data.seconds);
