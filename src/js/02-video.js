@@ -28,7 +28,7 @@ function setPlaybackPosition() {
 
     if (savedData) {
       player.setCurrentTime(parseddData);
-      player.play();
+      // player.play();
     }
   } catch (error) {
     console.log(error.name);
